@@ -15,14 +15,15 @@ public class Author {
         return lastName;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    @Override
+    public String toString() {
         return "" +
                 "имя: " + firstName +
                 ", фамилия: " + lastName +
                 "";
     }
 
+    @Override
     public boolean equals(Object object) {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
@@ -30,6 +31,7 @@ public class Author {
         return java.util.Objects.equals(firstName, author.firstName) && java.util.Objects.equals(lastName, author.lastName);
     }
 
+    @Override
     public int hashCode() {
         return java.util.Objects.hash(super.hashCode(), firstName, lastName);
     }
